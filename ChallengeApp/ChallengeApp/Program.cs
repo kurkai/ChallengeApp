@@ -1,21 +1,36 @@
-﻿var name = "Agata";
-var sex = 'F';
-var age = 44;
+﻿int number = 4566;
+string numberAsString = number.ToString();
+char[] digits = numberAsString.ToCharArray();
 
-if(sex == 'F' && age < 30)
+int[] counter = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+Console.WriteLine("Podaję ilość poszczególnych cyfr w liczbie " + numberAsString + ":");
+
+foreach (var digit in digits)
 {
-    Console.WriteLine("Kobieta poniżej 30 lat");
+    if (digit == '0')
+    { counter[0]++; }
+    else if (digit == '1')
+    { counter[1]++; }
+    else if (digit == '2')
+    { counter[2]++; }
+    else if (digit == '3')
+    { counter[3]++; }
+    else if (digit == '4')
+    { counter[4]++; }
+    else if (digit == '5')
+    { counter[5]++; }
+    else if (digit == '6')
+    { counter[6]++; }
+    else if (digit == '7')
+    { counter[7]++; }
+    else if (digit == '8')
+    { counter[8]++; }
+    else if (digit == '9')
+    { counter[9]++; }
 }
-else if(name == "Ewa" && age == 30)
+
+for (int i = 0; i < counter.Length; i++)
 {
-    Console.WriteLine("Ewa, lat 30"); 
-}
-else if (sex != 'F' && age < 18)
-{
-    Console.WriteLine("Niepełnoletni mężczyzna");
-}
-else
-{
-    Console.WriteLine("");
-    Console.WriteLine("Linijkę wyżej nie ma nic, bo to Agata co ma 44 lata!");
+    Console.WriteLine(i + "-->" + counter[i]);
 }
